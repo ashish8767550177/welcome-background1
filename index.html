@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Change Background</title>
+    <style>
+      body {
+        background-color: rgb(114, 201, 231);
+      }
+
+      .center {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Auto Change Background by ashish</h1>
+      <h3>welcome sargam mishra</h3>
+    </center>
+    <script>
+      const colors = ["red", "blue", "green", "orange", "pink", "navy blue"];
+
+      function changeBackground() {
+        const randomColor = getRandomColor();
+        document.body.style.backgroundColor = randomColor;
+      }
+
+      function getRandomColor() {
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        return colors[randomIndex];
+      }
+
+      setInterval(changeBackground, 1000);
+    </script>
+  </body>
+</html>
